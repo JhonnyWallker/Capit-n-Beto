@@ -1,0 +1,27 @@
+body {
+  background-image: url("https://res.cloudinary.com/dm4wfkipp/image/upload/v1677895474/fondo-datakraken_gqsty6.jpg");
+  font-family: "Genos", sans-serif;
+}
+
+.card-config {
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  
+  width: 234px;
+  height: 83px;
+  border-radius: 10px;
+  color: #fff;
+  margin: 10px;
+}
+
+.card-config:hover {
+  cursor: pointer;
+  background-color: #ffffff14;
+
+  color: #fff;
+  border-color: 1px solid #fff;
+}
+
+.img-avatar {
+  width: 50px;
+}
