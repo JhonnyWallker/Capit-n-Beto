@@ -8,12 +8,12 @@ function NavTabs() {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link text-white" href="#">
             Historias
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link text-white" href="#">
             Esteros del Iberá
           </a>
         </li>
