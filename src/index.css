@@ -1,6 +1,19 @@
 body {
   background-image: url("https://res.cloudinary.com/dm4wfkipp/image/upload/v1677895474/fondo-datakraken_gqsty6.jpg");
+  font-family: "Delicious Handrawn", sans-serif;
+}
+
+.body {
+  background-color: #000;
   font-family: "Genos", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .card-config {
@@ -59,4 +72,10 @@ body {
   background-color: rgba(243, 243, 243, 0.022);
 }
 
+.timon {
+  width: 50px;
+}
 
+.titulo {
+  font-family: "Montserrat", sans-serif;
+}

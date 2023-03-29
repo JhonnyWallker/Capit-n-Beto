@@ -1,19 +1,19 @@
 function NavTabs() {
   return (
     <div className="nav-tabs-config container">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+      <ul className="nav nav-tabs">
+        <li className="me-2">
+          <a id="leyenda" className="btn btn-dark" aria-current="page" href="/">
             Leyendas
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
+        <li className="me-2">
+          <a id="historias" className="btn btn-dark" href="/historias">
             Historias
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
+        <li className="me-2">
+          <a id="esteros" className="btn btn-dark" href="/esteros-del-ibera">
             Esteros del Iberá
           </a>
         </li>

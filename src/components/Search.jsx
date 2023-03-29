@@ -10,7 +10,7 @@ function Search() {
           />
         </div>
         <div className="col-2">
-          <button type="button" class="btn btn-dark text-white button-new">
+          <button type="button" className="btn btn-dark text-white button-new">
             add new...
           </button>
         </div>
