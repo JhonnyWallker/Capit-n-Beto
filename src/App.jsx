@@ -1,10 +1,12 @@
 import "./App.css";
+import CardsNoticias from "./components/CardsNoticias";
 import CardsLeyendas from "./components/CardsLeyendas";
 import CardsHistorias from "./components/CardsHistorias";
 import CardsEsteros from "./components/CardsEsteros";
 import NavBar from "./components/NavBar";
 import NavTabs from "./components/NavTabs";
 import Search from "./components/Search";
+import * as apiNoticias from "./services/datosNoticias";
 import * as apiLeyendas from "./services/datosLeyendas";
 import * as apiHistorias from "./services/datosHistorias";
 import * as apiEsteros from "./services/datosEsteros";
@@ -34,6 +36,13 @@ function App() {
     apiEsteros.getAllDatosEsteros().then(setEsteros);
   }, []);
 
+  //allDatosNoticias
+  const [noticias, setNoticias] = useState([]);
+
+  useEffect(() => {
+    apiNoticias.getAllDatosNoticias().then(setNoticias);
+  }, []);
+
   return (
     <div>
       <NavBar />
@@ -41,10 +50,14 @@ function App() {
       <div className="mt-5">
         <NavTabs />
       </div>
-      
+
       <Router>
         <div className="mt-5">
           <Routes>
+            <Route
+              path="/noticias"
+              element={<CardsNoticias noticias={noticias} />}
+            />
             <Route path="/" element={<CardsLeyendas leyendas={leyendas} />} />
             <Route
               path="/historias"

@@ -1,30 +1,32 @@
-const express = require("express");
-const morgan = require("morgan");
+import express from "express";
+import morgan from "morgan";
+import staticsRoutes from "./routes/statics.routes.js";
+import getRoutes from "./routes/get.routes.js";
+import postRoutes from "./routes/post.routes.js";
+import putRoutes from "./routes/put.routes.js";
+import deleteRoutes from "./routes/delete.routes.js";
 
 const app = express();
 const port = process.env.PORT || 4000;
-
-const response = [
-  {
-    name: "todos los datos",
-    id: 1,
-    age: 5,
-  },
-];
 
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 
 //statics
-app.use("/", express.static("./dist"));
-app.use("/historias", express.static("./dist"));
-app.use("/esteros-del-ibera", express.static("./dist"));
+app.use(staticsRoutes);
 
 //Get
-app.get("/api", (req, res) => {
-  res.json(response);
-});
+app.use(getRoutes);
+
+//Post
+app.use(postRoutes);
+
+//Put
+app.use(putRoutes);
+
+//Delete
+app.use(deleteRoutes);
 
 app.listen(port);
 console.log(`listening on port ${port} 💀`);
