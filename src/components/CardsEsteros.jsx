@@ -1,9 +1,19 @@
 import "./CardsStyles.css";
+import NavTabs from "./NavTabs";
+import Search from "./Search";
 
 function CardsEsteros({ esteros }) {
   return (
     <div className="container">
-        <h5 className="mb-5 titulo"><a href="/api" className="text-white">Esteros del Iberá</a></h5>
+      <Search />
+      <div className="mt-5">
+        <NavTabs />
+      </div>
+      <h5 className="mb-5 mt-5 titulo">
+        <a href="/api" className="text-white">
+          Esteros del Iberá
+        </a>
+      </h5>
       <div className="row bg-container-cards">
         {esteros.map((datoApi) => (
           <a className="col card-config" key={datoApi.id} href="/api">

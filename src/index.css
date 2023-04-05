@@ -8,6 +8,10 @@ body {
   font-family: "Genos", sans-serif;
 }
 
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -41,7 +45,7 @@ a:hover {
 }
 
 .img-logo {
-  width: 100px;
+  width: 70px;
 }
 
 .text-ago {
@@ -79,3 +83,18 @@ a:hover {
 .titulo {
   font-family: "Montserrat", sans-serif;
 }
+
+#lista {
+  display: none;
+}
+
+#form-noticias,
+#form-leyendas {
+  display: none;
+}
+
+.boton-cancelar {
+  width: 20px;
+  display: inline-block;
+}
+
