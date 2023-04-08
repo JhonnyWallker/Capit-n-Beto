@@ -1,4 +1,4 @@
-const url = "https://rickandmortyapi.com/api/character";
+const url = "http://localhost:4000/api/leyendas";
 
 export async function getAllDatosLeyendas() {
   try {

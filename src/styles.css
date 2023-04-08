@@ -1,11 +1,11 @@
-body {
+.body {
   background-image: url("https://res.cloudinary.com/dm4wfkipp/image/upload/v1677895474/fondo-datakraken_gqsty6.jpg");
   font-family: "Delicious Handrawn", sans-serif;
 }
 
-.body {
+body {
   background-color: #000;
-  font-family: "Genos", sans-serif;
+  font-family: "Delicious Handrawn", sans-serif;
 }
 
 .font-montserrat {
@@ -89,7 +89,9 @@ a:hover {
 }
 
 #form-noticias,
-#form-leyendas {
+#form-leyendas,
+#form-historias,
+#form-esteros-del-ibera {
   display: none;
 }
 
@@ -98,3 +100,29 @@ a:hover {
   display: inline-block;
 }
 
+.config-logo-vite {
+  width: 60px;
+}
+
+.config-logo-cloudinary {
+  width: 200px;
+}
+
+.config-logo-vercel {
+  width: 200px;
+}
+
+.config-logo-aguara {
+  width: 150px;
+}
+
+.config-navStatus {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wbadge {
+  width: 50px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}

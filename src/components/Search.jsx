@@ -15,6 +15,14 @@ function Search() {
     document.getElementById("form-leyendas").style.display = "block";
   };
 
+  const botonHistorias = () => {
+    document.getElementById("form-historias").style.display = "block";
+  };
+
+  const botonEsteros = () => {
+    document.getElementById("form-esteros-del-ibera").style.display = "block";
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -75,7 +83,9 @@ function Search() {
             <li>
               <a
                 className="dropdown-item font-montserrat bg-dark text-white"
-                href="#"
+                onClick={() => {
+                  botonHistorias();
+                }}
               >
                 Historias
               </a>
@@ -84,7 +94,9 @@ function Search() {
             <li>
               <a
                 className="dropdown-item font-montserrat bg-dark text-white"
-                href="#"
+                onClick={() => {
+                  botonEsteros();
+                }}
               >
                 Esteros del Iberá
               </a>

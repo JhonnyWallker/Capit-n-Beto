@@ -2,6 +2,15 @@ import { Schema, model } from "mongoose";
 
 const leyendasSchema = new Schema(
   {
+    fileLegends: {
+      type: String,
+    },
+    image_url: {
+      type: String,
+    },
+    image_id: {
+      type: String,
+    },
     titleLegends: {
       type: String,
       trim: true,
@@ -18,10 +27,7 @@ const leyendasSchema = new Schema(
       type: String,
       trim: true,
     },
-    fileLegends: {
-      type: String,
-      trim: true,
-    },
+
     dateLegends: {
       type: String,
       trim: true,

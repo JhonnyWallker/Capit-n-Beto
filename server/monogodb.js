@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 export const mongoConnect = mongoose
-  .connect("mongodb+srv://whippo:bIdHpTqXa0fsmE4z@noticias.ypubo8w.mongodb.net/?retryWrites=true&w=majority")
+  .connect(process.env.mongo_uri)
   .then(() => console.log("Connect to MongoDB Atlas (noticias) 🌱"))
   .catch((error) => console.error(error));
-
-//mongodb+srv://<username>:<password>@prueba.n9d4mmn.mongodb.net/?retryWrites=true&w=majority(...)
 
 //mongodb+srv://whippo:bIdHpTqXa0fsmE4z@noticias.ypubo8w.mongodb.net/?retryWrites=true&w=majority

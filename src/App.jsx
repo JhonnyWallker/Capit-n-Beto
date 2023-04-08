@@ -1,4 +1,3 @@
-import "./App.css";
 import CardsNoticias from "./components/CardsNoticias";
 import CardsLeyendas from "./components/CardsLeyendas";
 import CardsHistorias from "./components/CardsHistorias";
@@ -10,7 +9,8 @@ import * as apiHistorias from "./services/datosHistorias";
 import * as apiEsteros from "./services/datosEsteros";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Forms from "./components/Forms";
+import Footer from "./components/Footer";
+import NavStatus from "./components/NavStatus";
 
 function App() {
   //allDatosLeyendas
@@ -50,13 +50,23 @@ function App() {
     document.getElementById("form-leyendas").style.display = "none";
   };
 
+  const escHistorias = () => {
+    document.getElementById("form-historias").style.display = "none";
+  };
+
+  const escEsterosDelIbera = () => {
+    document.getElementById("form-esteros-del-ibera").style.display = "none";
+  };
+
   return (
     <div>
+      <NavStatus />
       <NavBar />
       <div className="container">
         <form
           action="/post/noticias"
           method="post"
+          enctype="multipart/form-data"
           id="form-noticias"
           className="font-montserrat"
         >
@@ -75,7 +85,9 @@ function App() {
               className="boton-cancelar"
             />
           </a>
-          <label className="font-montserrat m-2 ms-3 text-info fs-5">Noticia</label>
+          <label className="font-montserrat m-2 ms-3 text-info fs-5">
+            Noticias
+          </label>
           <input
             type="text"
             name="title"
@@ -107,13 +119,14 @@ function App() {
 
           <div className="d-flex justify-content-center mt-3">
             <button type="submit" className="btn btn-info">
-              enviar
+              publicar
             </button>
           </div>
         </form>
         <form
           action="/post/leyendas"
           method="post"
+          enctype="multipart/form-data"
           id="form-leyendas"
           className="font-montserrat"
         >
@@ -132,7 +145,9 @@ function App() {
               className="boton-cancelar"
             />
           </a>
-          <label className="font-montserrat m-2 ms-3 text-info fs-5">Leyendas</label>
+          <label className="font-montserrat m-2 ms-3 text-info fs-5">
+            Leyendas
+          </label>
           <input
             type="text"
             name="titleLegends"
@@ -159,20 +174,139 @@ function App() {
               className="form-control col"
             />
           </div>
-          <input type="file" name="fileLegends" className="form-control m-3" />
+          <input type="file" name="file" className="form-control m-3" />
           <input type="date" name="dateLegends" className="form-control m-3" />
 
           <div className="d-flex justify-content-center mt-3">
             <button type="submit" className="btn btn-info">
-              enviar
+              publicar
+            </button>
+          </div>
+        </form>
+        <form
+          action="/post/historias"
+          method="post"
+          enctype="multipart/form-data"
+          id="form-historias"
+          className="font-montserrat"
+        >
+          <a
+            className="fondo-transparente d-flex justify-content-end"
+            type="button"
+            id="esc-historias"
+            onClick={() => {
+              escHistorias();
+            }}
+          >
+            <img
+              src="https://res.cloudinary.com/dm4wfkipp/image/upload/v1680635827/boton-eliminar_alsxq9.png"
+              alt="cancelar"
+              title="cancelar"
+              className="boton-cancelar"
+            />
+          </a>
+          <label className="font-montserrat m-2 ms-3 text-info fs-5">
+            Historias
+          </label>
+          <input
+            type="text"
+            name="titleHistory"
+            placeholder="Título"
+            className="form-control m-3"
+          />
+          <input
+            type="text"
+            name="categoryHistory"
+            placeholder="Categoría"
+            className="form-control m-3"
+          />
+          <div className="row ms-3">
+            <textarea
+              type="text"
+              name="descriptionHistory"
+              placeholder="Descripción"
+              className="form-control col me-2"
+            />
+            <textarea
+              type="text"
+              name="contentHistory"
+              placeholder="Contenido"
+              className="form-control col"
+            />
+          </div>
+          <input type="file" name="file" className="form-control m-3" />
+          <input type="date" name="dateHistory" className="form-control m-3" />
+
+          <div className="d-flex justify-content-center mt-3">
+            <button type="submit" className="btn btn-info">
+              publicar
+            </button>
+          </div>
+        </form>
+        <form
+          action="/post/esteros-del-ibera"
+          method="post"
+          enctype="multipart/form-data"
+          id="form-esteros-del-ibera"
+          className="font-montserrat"
+        >
+          <a
+            className="fondo-transparente d-flex justify-content-end"
+            type="button"
+            id="esc-esteros-del-ibera"
+            onClick={() => {
+              escEsterosDelIbera();
+            }}
+          >
+            <img
+              src="https://res.cloudinary.com/dm4wfkipp/image/upload/v1680635827/boton-eliminar_alsxq9.png"
+              alt="cancelar"
+              title="cancelar"
+              className="boton-cancelar"
+            />
+          </a>
+          <label className="font-montserrat m-2 ms-3 text-info fs-5">
+            Esteros del Iberá
+          </label>
+          <input
+            type="text"
+            name="titleEsteros"
+            placeholder="Título"
+            className="form-control m-3"
+          />
+          <input
+            type="text"
+            name="categoryEsteros"
+            placeholder="Categoría"
+            className="form-control m-3"
+          />
+          <div className="row ms-3">
+            <textarea
+              type="text"
+              name="descriptionEsteros"
+              placeholder="Descripción"
+              className="form-control col me-2"
+            />
+            <textarea
+              type="text"
+              name="contentEsteros"
+              placeholder="Contenido"
+              className="form-control col"
+            />
+          </div>
+          <input type="file" name="file" className="form-control m-3" />
+          <input type="date" name="dateEsteros" className="form-control m-3" />
+
+          <div className="d-flex justify-content-center mt-3">
+            <button type="submit" className="btn btn-info">
+              publicar
             </button>
           </div>
         </form>
       </div>
       <Router>
-        <div className="mt-5">
+        <div className="mt-5 mb-5">
           <Routes>
-            <Route path="/post" element={<Forms />} />
             <Route
               path="/noticias"
               element={<CardsNoticias noticias={noticias} />}
@@ -189,6 +323,9 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <div className="container mt-5 d-flex justify-content-between">
+        <Footer />
+      </div>
     </div>
   );
 }

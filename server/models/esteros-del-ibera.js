@@ -1,8 +1,8 @@
 import { Schema, model } from "mongoose";
 
-const noticiaSchema = new Schema(
+const esterosSchema = new Schema(
   {
-    file: {
+    fileEsteros: {
       type: String,
     },
     image_url: {
@@ -11,24 +11,24 @@ const noticiaSchema = new Schema(
     image_id: {
       type: String,
     },
-    title: {
+    titleEsteros: {
       type: String,
       trim: true,
     },
-    category: {
+    categoryEsteros: {
       type: String,
       trim: true,
     },
-    description: {
+    descriptionEsteros: {
       type: String,
       trim: true,
     },
-    content: {
+    contentEsteros: {
       type: String,
       trim: true,
     },
 
-    date: {
+    dateEsteros: {
       type: String,
       trim: true,
     },
@@ -38,4 +38,4 @@ const noticiaSchema = new Schema(
   }
 );
 
-export default model("noticias", noticiaSchema);
+export default model("esteros", esterosSchema);
