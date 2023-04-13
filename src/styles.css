@@ -5,6 +5,10 @@
 
 body {
   background-color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.capitanBeto {
   font-family: "Delicious Handrawn", sans-serif;
 }
 
@@ -125,4 +129,16 @@ a:hover {
   width: 50px;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
+}
+
+.iconDelete, .iconSetting {
+  color: #fff;
+}
+
+.iconDelete:hover {
+  color: #e23749;
+}
+
+.iconSetting:hover {
+  color: #0ed7f4;
 }

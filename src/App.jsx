@@ -11,6 +11,8 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavStatus from "./components/NavStatus";
+import SearchInput from "./components/SearchInput";
+import Search from "./components/Search";
 
 function App() {
   //allDatosLeyendas
@@ -57,6 +59,60 @@ function App() {
   const escEsterosDelIbera = () => {
     document.getElementById("form-esteros-del-ibera").style.display = "none";
   };
+
+  //filter Esteros
+  const [filtroEsteros, setFiltroEsteros] = useState([]);
+  const handleChange = (e) => {
+    setFiltroEsteros(e.target.value);
+    setFiltroNoticias(e.target.value);
+    setFiltroLeyendas(e.target.value);
+    setFiltroHistorias(e.target.value);
+  };
+
+  let esterosFilter = [];
+  if (filtroEsteros === undefined) {
+    esterosFilter = esteros;
+  } else {
+    esterosFilter = esteros.filter((esteros) =>
+      esteros.titleEsteros.toLowerCase().includes(filtroEsteros)
+    );
+  }
+
+  //filter noticias
+  const [filtroNoticias, setFiltroNoticias] = useState([]);
+
+  let noticiasFilter = [];
+  if (filtroNoticias === undefined) {
+    noticiasFilter = noticias;
+  } else {
+    noticiasFilter = noticias.filter((noticias) =>
+      noticias.title.toLowerCase().includes(filtroNoticias)
+    );
+  }
+
+  //filter leyendas
+  const [filtroLeyendas, setFiltroLeyendas] = useState([]);
+
+  let leyendasFilter = [];
+  if (filtroLeyendas === undefined) {
+    leyendasFilter = leyendas;
+  } else {
+    leyendasFilter = leyendas.filter((leyendas) =>
+      leyendas.titleLegends.toLowerCase().includes(filtroLeyendas)
+    );
+  }
+
+  //filter historias
+  const [filtroHistorias, setFiltroHistorias] = useState([]);
+
+  let historiasFilter = [];
+  if (filtroHistorias === undefined) {
+    historiasFilter = historias;
+  } else {
+    historiasFilter = historias.filter((historias) =>
+      historias.titleHistory.toLowerCase().includes(filtroHistorias)
+    );
+  }
 
   return (
     <div>
@@ -304,21 +360,35 @@ function App() {
           </div>
         </form>
       </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-10">
+            <SearchInput handleChange={handleChange} />
+          </div>
+          <div className="col-2 nav">
+            <Search />
+          </div>
+        </div>
+      </div>
+
       <Router>
         <div className="mt-5 mb-5">
           <Routes>
             <Route
               path="/noticias"
-              element={<CardsNoticias noticias={noticias} />}
+              element={<CardsNoticias noticias={noticiasFilter} />}
             />
-            <Route path="/" element={<CardsLeyendas leyendas={leyendas} />} />
+            <Route
+              path="/"
+              element={<CardsLeyendas leyendas={leyendasFilter} />}
+            />
             <Route
               path="/historias"
-              element={<CardsHistorias historias={historias} />}
+              element={<CardsHistorias historias={historiasFilter} />}
             />
             <Route
               path="/esteros-del-ibera"
-              element={<CardsEsteros esteros={esteros} />}
+              element={<CardsEsteros esteros={esterosFilter} />}
             />
           </Routes>
         </div>

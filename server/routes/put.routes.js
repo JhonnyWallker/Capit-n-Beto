@@ -3,6 +3,6 @@ import { putControllers } from "../controllers/allControllers.js";
 
 const router = Router();
 
-router.put("/put", putControllers);
+router.get("/put/:id", putControllers);
 
 export default router;
