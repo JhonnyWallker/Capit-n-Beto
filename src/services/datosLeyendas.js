@@ -1,4 +1,4 @@
-const url = "http://whippho.online/api/leyendas";
+const url = "http://whippo.online/api/leyendas";
 
 export async function getAllDatosLeyendas() {
   try {
