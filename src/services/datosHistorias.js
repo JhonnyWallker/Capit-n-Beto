@@ -1,4 +1,4 @@
-const url = "http://localhost:4000/api/historias";
+const url = "http://whippo.online/api/historias";
 
 export async function getAllDatosHistorias() {
   try {

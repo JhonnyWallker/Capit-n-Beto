@@ -1,4 +1,4 @@
-const url = "http://localhost:4000/api/esteros-del-ibera";
+const url = "http://whippo.online/api/esteros-del-ibera";
 
 export async function getAllDatosEsteros() {
   try {

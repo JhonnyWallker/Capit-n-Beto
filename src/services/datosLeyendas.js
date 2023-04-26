@@ -1,4 +1,4 @@
-const url = "http://localhost:4000/api/leyendas";
+const url = "http://whippho.online/api/leyendas";
 
 export async function getAllDatosLeyendas() {
   try {

@@ -27,7 +27,6 @@ const storage = multer.diskStorage({
 });
 app.use(multer({ storage }).single("file"));
 
-
 //statics
 app.use(staticsRoutes);
 
