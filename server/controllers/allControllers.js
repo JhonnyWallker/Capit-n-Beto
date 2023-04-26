@@ -97,7 +97,7 @@ export const postControllersNoticias = async (req, res) => {
       const photo = await cloudinary.v2.uploader.upload(req.file.path);
       const { title, category, description, content, date } = req.body;
       const newNews = new News({
-        image_url: photo.url,
+        image_url: photo.secure_url,
         image_id: photo.public_id,
         title,
         category,
@@ -133,7 +133,7 @@ export const postControllersLeyendas = async (req, res) => {
         dateLegends,
       } = req.body;
       const newLeyendas = new NewsLeyendas({
-        image_url: photo.url,
+        image_url: photo.secure_url,
         image_id: photo.public_id,
         titleLegends,
         categoryLegends,
@@ -168,7 +168,7 @@ export const postControllersHistorias = async (req, res) => {
         dateHistory,
       } = req.body;
       const newHistoria = new NewsHistorias({
-        image_url: photo.url,
+        image_url: photo.secure_url,
         image_id: photo.public_id,
         titleHistory,
         categoryHistory,
@@ -202,7 +202,7 @@ export const postControllersEsyerosDeliberas = async (req, res) => {
         dateEsteros,
       } = req.body;
       const newEsteros = new NewsEsteros({
-        image_url: photo.url,
+        image_url: photo.secure_url,
         image_id: photo.public_id,
         titleEsteros,
         categoryEsteros,
