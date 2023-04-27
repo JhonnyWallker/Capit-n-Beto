@@ -7,8 +7,8 @@ function NavBar() {
             <a href="/">
               <div>
                 <img
-                  src="http://res.cloudinary.com/dfuguhulh/image/upload/v1682128463/taha7cngvcarrdhxvdjr.png"
-                  alt="Capitán Beto"
+                  src="https://res.cloudinary.com/dm4wfkipp/image/upload/v1682616212/whippo-ballena-panel_zudzrt.png"
+                  alt="Whippo-Panel"
                   className="img-logo"
                 />
               </div>
