@@ -40,10 +40,24 @@ function CardsEsteros({ esteros }) {
       <div className="mt-5">
         <NavTabs />
       </div>
-      <h5 className="mb-5 mt-5 titulo">
-        <a href="/api/esteros-del-ibera" className="text-white">
+      <h5 className="mb-5 mt-5 titulo d-flex justify-content-between">
+        <a href="/api/noticias" className="text-white">
           Esteros del Iberá
         </a>
+        <h5
+          className="text-white fst-italic border border-info p-3 rounded-3"
+          id="url"
+        >
+          https://whippo.online/api/esteros-del-ibera
+          <a
+            className="ms-3"
+            onClick={() => {
+              copy();
+            }}
+          >
+            <i class="fa-solid fa-copy text-white fs-4"></i>
+          </a>
+        </h5>
       </h5>
       <div className="row bg-container-cards position-relative">
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wbadge">
