@@ -9,7 +9,7 @@ function NavStatus() {
           <a href="#" className="text-white">About</a>
         </li>
         <li className="navbar-brand config-navStatus nav">
-        <button type="button" class="btn btn-outline-info">Support</button>
+        <button type="button" className="btn btn-outline-info">Support</button>
         </li>
       </ul>
     </div>

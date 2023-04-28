@@ -44,7 +44,7 @@ function CardsEsteros({ esteros }) {
         <a href="/api/noticias" className="text-white">
           Esteros del Iberá
         </a>
-        <h5
+        <h6
           className="text-white fst-italic border border-info p-3 rounded-3 d-none d-sm-block"
           id="url"
         >
@@ -57,7 +57,7 @@ function CardsEsteros({ esteros }) {
           >
             <i class="fa-solid fa-copy text-white fs-4"></i>
           </a>
-        </h5>
+        </h6>
       </h5>
       <div className="row bg-container-cards position-relative">
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wbadge">

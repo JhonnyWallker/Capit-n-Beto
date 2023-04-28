@@ -25,14 +25,13 @@ function Search() {
 
   return (
     <>
-      <button
+      <a
         onClick={() => {
           pulsar();
         }}
-        className="btn btn-dark text-white button-new nav-link dropdown-toggle"
       >
-        add new...
-      </button>
+        <i class="fa-solid fa-plus btn btn-outline-info align-top fs-4"></i>
+      </a>
 
       <ul className="dropdown-menu bg-dark" id="lista">
         <div className="d-flex justify-content-end me-3 bg-dark">
