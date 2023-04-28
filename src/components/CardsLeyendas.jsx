@@ -1,5 +1,6 @@
 import NavTabs from "./NavTabs";
 import Swal from "sweetalert2";
+import NavTabsResponsive from "./NavTabsResponsive";
 
 function CardsLeyendas({ leyendas }) {
   function confirmDelete(id) {
@@ -41,8 +42,11 @@ function CardsLeyendas({ leyendas }) {
 
   return (
     <div className="container">
-      <div className="mt-5">
+      <div className="mt-5 d-none d-sm-block">
         <NavTabs />
+      </div>
+      <div className="d-block d-sm-none">
+        <NavTabsResponsive />
       </div>
       <h5 className="mb-5 mt-5 titulo d-flex justify-content-between">
         <a href="/api/noticias" className="text-white">

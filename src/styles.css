@@ -131,7 +131,8 @@ a:hover {
   font-family: "Montserrat", sans-serif;
 }
 
-.iconDelete, .iconSetting {
+.iconDelete,
+.iconSetting {
   color: #fff;
 }
 
@@ -141,4 +142,8 @@ a:hover {
 
 .iconSetting:hover {
   color: #0ed7f4;
+}
+
+.list-respons {
+  display: none;
 }
