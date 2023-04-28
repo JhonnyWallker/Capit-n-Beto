@@ -2,7 +2,16 @@ function NavBar() {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <a href="/" className="d-block d-sm-none d-flex justify-content-center">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dm4wfkipp/image/upload/v1682616212/whippo-ballena-panel_zudzrt.png"
+              alt="Whippo-Panel"
+              className="img-logo"
+            />
+          </div>
+        </a>
+        <div className="row d-none d-sm-block">
           <div className="col-3">
             <a href="/">
               <div>

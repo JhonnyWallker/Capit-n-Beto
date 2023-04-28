@@ -362,7 +362,7 @@ function App() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-10">
+          <div className="col-10 d-none d-sm-block">
             <SearchInput handleChange={handleChange} />
           </div>
           <div className="col-2 nav">

@@ -45,7 +45,7 @@ function CardsEsteros({ esteros }) {
           Esteros del Iberá
         </a>
         <h5
-          className="text-white fst-italic border border-info p-3 rounded-3"
+          className="text-white fst-italic border border-info p-3 rounded-3 d-none d-sm-block"
           id="url"
         >
           https://whippo.online/api/esteros-del-ibera
