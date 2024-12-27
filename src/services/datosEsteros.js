@@ -1,4 +1,4 @@
-const url = "https://whippo.online/api/esteros-del-ibera";
+const url = "https://whippo-eq6x.onrender.com/api/esteros-del-ibera";
 
 export async function getAllDatosEsteros() {
   try {
